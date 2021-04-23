@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		var $txt1 = $(".txt_1 span"),
+			$txt2 = $(".txt_2 span"),
+			$box = $(".box");
+		
+		var off_t = $box.offset().top;
+		var pos_t = $box.position().top;
+		
+		$txt1.text(off_t);
+		$txt2.text(pos_t);
+	});
+</script>
+<style type="text/css">
+	{margin : 0;
+	padding : 0;}
+	
+	#box_wrap{
+		width: 300px;
+		height: 200px;
+		margin: 50px auto;
+		position : relative;		
+		background-color: #ccc;	
+	}
+	
+	.box{
+		width: 50px;
+		height: 50px;
+		position : absolute;
+		left: 100px;
+		top: 50px;	
+		background-color: #f00;	
+	}
+	
+
+</style>
+</head>
+<body>
+	<div id="box_wrap">
+		<p class="box">박스</p>	
+	</div>
+		<p class="txt_1">절대 top위칫값<span></span></p>	
+		<p class="txt_2">상대 top위칫값<span></span></p>	
+</body>
+</html>

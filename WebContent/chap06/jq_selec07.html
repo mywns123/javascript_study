@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("#list_1").parent().css("border", "2px dashed #f00");
+	});
+</script>
+</head>
+<body>
+	<h1>인접 관계 선택자</h1>
+	<ul id="wrap">
+		<li>
+			<ul>
+				<li id="list_1">리스트1_1</li>
+				<li>리스트1_2</li>	
+			</ul>
+		</li>
+		<li>리스트2</li>
+		<li>리스트3</li>		
+	</ul>	
+</body>
+</html>

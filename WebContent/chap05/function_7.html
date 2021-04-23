@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function fac(n) {
+		if(n ==1) return 1;
+		else return n * fac(n-1);
+	}
+	
+	document.write(fac(5) + "<br>");
+	
+	function DecToTwo(n) {
+		if( n < 2){
+			document.write(n + " ");
+		}else{
+			DecToTwo(Math.floor(n/2));
+			document.write(n%2 + " ");
+		}
+	}
+	DecToTwo(11);	
+</script>
+</head>
+<body>
+
+</body>
+</html>
