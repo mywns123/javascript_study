@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.oddbtn{
+	color: #f00;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		//이벤트 헨들러 등록
+		clickHandler = function(){
+			var isodd =$(".btn1").parent().next().hasClass("oddbtn");
+			var t = $(".btn1").parent().next();
+			if(isodd){
+				t.removeClass("oddbtn");
+			}else{
+				t.addClass("oddbtn");
+			}				
+			/* $(".btn1").parent().next().css("color", "#f00"); */
+		};
+		
+		$(".btn1").click(clickHandler);
+			 
+		//이벤트 헨들러 등록
+		$(".btn2").on({
+			"mouseover focus" : function() {
+				$(".btn2").parent().next().css("color", "#0f0");		
+			},
+			"mouseout blur" : function() {
+				$(".btn2").parent().next().css("color", "#00f");		
+			}
+		});
+		
+		$(".btn3").click(function(){
+			$(".btn1").off("click");
+			$(".btn2").off("mouseover focus");
+		});
+		
+		
+		//강제로 이벤트 발생
+		$(".btn1").click();
+		$(".btn2").trigger("mouseover");
+	});
+</script>
+</head>
+<body>
+	<p><button class="btn1">버튼1</button></p>
+	<p>내용1</p>
+	<p><button class="btn2">버튼2</button></p>
+	<p>내용2</p>
+	<p><button class="btn3">버튼3</button></p>
+	<p>내용3</p>
+</body>
+</html>
