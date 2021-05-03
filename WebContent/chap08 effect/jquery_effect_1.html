@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.content{
+		width: 400px;
+		background-color: #eee;
+	}	
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$(".btn2").hide();
+		
+		$(".btn1").on("click", btn1);
+		
+		$(".btn2").on("click", btn2);
+		
+		$(".btn3").on("click", btn3);		
+		
+		$(".btn4").on("click", btn4);
+		
+		$(".btn5").on("click", btn5);		
+	});
+	
+	function btn1() {
+		$(".box").slideUp(1000, "linear", function() {
+			$(".btn1").hide();
+			$(".btn2").show();
+		});
+	}
+	
+	function btn2() {
+		$(".box").fadeIn(1000, "swing", function() {
+			$(".btn2").hide();
+			$(".btn1").show();
+		});
+	}
+
+	function btn3() {
+		$(".box").slideToggle(1000, "linear");		
+	}
+
+	function btn4() {
+		$(".box").fadeTo("slow", 0.3);
+	}
+	
+	function btn5() {
+		$(".box").fadeTo("fast", 1);
+	}
+	
+</script>
+</head>
+<body>
+	<p>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">fadeIn</button>
+	</p>
+	<p>
+		<button class="btn3">toggleSlide</button>	
+	</p>
+	<p>
+		<button class="btn4">fadeTo(0.3)</button>
+		<button class="btn5">fadeTo(1)</button>		
+	</p>
+	<div class="box">
+		<div class="content">
+		<p>대한민국의 영토는 한반도와 그 부속도서로 한다. 정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다. 국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.</p>
+		</div>	
+	</div>
+</body>
+</html>
