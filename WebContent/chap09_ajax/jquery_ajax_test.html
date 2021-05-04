@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("#newsWrap_1").load("jquery_ajax_news.html #news_1");
+		$("#newsWrap_2").load("jquery_ajax_news.html #news_2");
+	});
+</script>
+</head>
+<body>
+	<h1>LOAD 1</h1>
+	<div id="newsWrap_1">1</div>
+	<h1>LOAD 2</h1>
+	<div id="newsWrap_2"></div>
+</body>
+</html>
