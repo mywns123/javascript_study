@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<style>
+	*{margin: 0;padding: 0;}
+	li{list-style: none;}
+	#gallery_wrap{ margin: 0 auto; width: 450px;}
+	#gallery_wrap .bx-wrapper{margin-bottom: 20px;}
+	.slider-pager{text-align: center;}
+	.slider-pager li{display: inline;}
+	#slide-pager  > img{width: 50px;}
+</style>
+<script>
+	$(function() {
+		$(".slide_gallery").bxSlider({
+			auto: true,
+			autoControls : false,
+			pagerCustom:'.slide-pager'			
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="gallery_wrap">
+		<ul class="slide_gallery">
+			<li><img alt="사진1" src="images/pic_1.jpg"></li>
+			<li><img alt="사진2" src="images/pic_2.jpg"></li>
+			<li><img alt="사진3" src="images/pic_3.jpg"></li>
+			<li><img alt="사진4" src="images/pic_4.jpg"></li>
+			<li><img alt="사진5" src="images/pic_8.jpg"></li>		
+		</ul>
+		<ul class="slide-pager">	
+			<li><a href="#" data-slide-index="0">
+			<img alt="사진1" src="images/pic_1.jpg"></a></li>
+			<li><a href="#" data-slide-index="1">
+			<img alt="사진2" src="images/pic_2.jpg"></a></li>
+			<li><a href="#" data-slide-index="2">
+			<img alt="사진3" src="images/pic_3.jpg"></a></li>
+			<li><a href="#" data-slide-index="3">
+			<img alt="사진4" src="images/pic_4.jpg"></a></li>
+			<li><a href="#" data-slide-index="4">
+			<img alt="사진5" src="images/pic_8.jpg"></a></li>
+		</ul>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI Draggable - Default functionality</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+<style>
+#draggable {
+	width: 150px;
+	height: 150px;
+	padding: 0.5em;
+}
+</style>
+<script src="js/jquery-ui.min.js"></script>
+<script>
+	$(function() {
+		$("#draggable").draggable();
+	});
+</script>
+</head>
+<body>
+	<div id="draggable" class="ui-widget-content">
+		<img alt="" src="images/가위.jpg">
+	</div>
+</body>
+</html>
