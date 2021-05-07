@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(function() {
+		$(".btn li").click(function() {
+			$(this).addClass("active");
+			$(this).siblings().removeClass('active');
+		
+		
+		/* var tab = $(this).attr("data-alt"); */
+		/* alert(tab); */
+			$(".tabs div").removeClass("active");
+		/* $("#" + tab).addClass("active"); */
+			$(".tabs div").eq($(this).index()).addClass("active");
+		
+		});
+	});
+	</script>
+	<link rel="stylesheet" href="css/prototype.css">
+</head>
+<body>
+	<section>
+		<ul class="btn">
+			<li class="active">HTML5</li>
+			<li>CSS5</li>
+			<li>JQUERY</li>
+			<li>JAVASCRIPT</li>
+			<li>CSS FRAMEWORKS</li>
+		</ul>		
+		<div class="tabs">
+			<div class="active">tab1</div>
+			<div>tab2</div>
+			<div>tab3</div>
+			<div>tab4</div>
+			<div>tab5</div>
+		</div>
+	</section>
+</body>
+</html>

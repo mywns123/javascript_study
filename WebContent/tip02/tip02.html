@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(function() {
+		$(".btn li").click(function() {
+			$(this).addClass("active");
+			$(this).siblings().removeClass('active');
+		
+		
+		/* var tab = $(this).attr("data-alt"); */
+		/* alert(tab); */
+			$(".tabs div").removeClass("active");
+		/* $("#" + tab).addClass("active"); */
+			$(".tabs div").eq($(this).index()).addClass("active");
+		
+		});
+	});
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section>
+		<div class="heading">
+		<h1><span>웹 개발자</span>, 탭 메뉴 Tip & Tech</h1>
+		<input type="text" placeholder="What are you looking for?">
+		</div>
+		<div class="tab-inner">
+		<ul class="btn">
+			<li class="active">HTML5</li>
+			<li>CSS3</li>
+			<li>JQUERY</li>
+			<li>JAVASCRIPT</li>
+			<li>CSS FRAMEWORKS</li>
+		</ul>		
+		<div class="tabs">
+			<div class="active">
+			<h2>HTML5</h2>
+			<img alt="" src="images/platform-logo-01.png">
+					<p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse volutpat, nunc nec tincidunt posuere, lacus dolor
+						blandit tortor, id porttitor ante sapien gravida elit. Proin nec
+						arcu eget elit laoreet imperdiet. Praesent eu ante iaculis,
+						condimentum lorem eget, tincidunt leo. Donec rutrum tincidunt quam
+						in aliquam. Nulla a turpis malesuada, pulvinar purus varius,
+						ornare magna. Etiam fermentum urna id fringilla vulputate.
+						Vestibulum eget hendrerit arcu, ac venenatis massa. Lorem ipsum
+						dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			<div><h2>CSS3</h2>
+			<img alt="" src="images/platform-logo-02.png">
+					<p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse volutpat, nunc nec tincidunt posuere, lacus dolor
+						blandit tortor, id porttitor ante sapien gravida elit. Proin nec
+						arcu eget elit laoreet imperdiet. Praesent eu ante iaculis,
+						condimentum lorem eget, tincidunt leo. Donec rutrum tincidunt quam
+						in aliquam. Nulla a turpis malesuada, pulvinar purus varius,
+						ornare magna. Etiam fermentum urna id fringilla vulputate.
+						Vestibulum eget hendrerit arcu, ac venenatis massa. Lorem ipsum
+						dolor sit amet, consectetur adipiscing elit.</p></div>
+			<div><h2>JQUERY</h2>
+			<img alt="" src="images/platform-logo-03.png">
+					<p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse volutpat, nunc nec tincidunt posuere, lacus dolor
+						blandit tortor, id porttitor ante sapien gravida elit. Proin nec
+						arcu eget elit laoreet imperdiet. Praesent eu ante iaculis,
+						condimentum lorem eget, tincidunt leo. Donec rutrum tincidunt quam
+						in aliquam. Nulla a turpis malesuada, pulvinar purus varius,
+						ornare magna. Etiam fermentum urna id fringilla vulputate.
+						Vestibulum eget hendrerit arcu, ac venenatis massa. Lorem ipsum
+						dolor sit amet, consectetur adipiscing elit.</p></div>
+			<div><h2>JAVASCRIPT</h2>
+			<img alt="" src="images/platform-logo-04.png">
+					<p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse volutpat, nunc nec tincidunt posuere, lacus dolor
+						blandit tortor, id porttitor ante sapien gravida elit. Proin nec
+						arcu eget elit laoreet imperdiet. Praesent eu ante iaculis,
+						condimentum lorem eget, tincidunt leo. Donec rutrum tincidunt quam
+						in aliquam. Nulla a turpis malesuada, pulvinar purus varius,
+						ornare magna. Etiam fermentum urna id fringilla vulputate.
+						Vestibulum eget hendrerit arcu, ac venenatis massa. Lorem ipsum
+						dolor sit amet, consectetur adipiscing elit.</p></div>
+			<div><h2>CSS FRAMEWORKS</h2>
+			<img alt="" src="images/platform-logo-05.png">
+					<p> &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse volutpat, nunc nec tincidunt posuere, lacus dolor
+						blandit tortor, id porttitor ante sapien gravida elit. Proin nec
+						arcu eget elit laoreet imperdiet. Praesent eu ante iaculis,
+						condimentum lorem eget, tincidunt leo. Donec rutrum tincidunt quam
+						in aliquam. Nulla a turpis malesuada, pulvinar purus varius,
+						ornare magna. Etiam fermentum urna id fringilla vulputate.
+						Vestibulum eget hendrerit arcu, ac venenatis massa. Lorem ipsum
+						dolor sit amet, consectetur adipiscing elit.</p></div>
+		</div>
+		</div>
+	</section>
+</body>
+</html>
