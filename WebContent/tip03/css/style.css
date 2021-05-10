@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body{
+	margin:  0;
+	font-family: 'Montserrat', sans-serif;
+	/* background: #000; 테스트 */
+}
+.navi{
+	/* 중앙정렬 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform : translate(-50%,-50%);
+	
+	z-index: 100;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navi li{}
+
+.navi li a{
+	font-size: 4em;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+}
+
+.navi li a:after /* a:before */{
+	position: absolute;
+	color: yellowgreen;
+	top: 0;
+	left: 0;
+	
+	width: 10%;
+	overflow : hidden;
+	content: attr(data-text);	
+	
+	transition : 0.5s;
+}
+
+.navi li a:hover:after, .navi li a:focus:after{
+	width: 100%;
+}
+						
+.photo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+/* 	background: url("../images/portrait-initial.jpg") no-repeat center수직 center수평;*/
+	background: url("../images/portrait-initial.jpg");
+	background-repeat : no-repeat;
+	background-position : center/* 수직 */ center/* 수평 */;
+	background-size: cover;
+}

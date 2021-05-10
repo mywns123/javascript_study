@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import
+	url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+	;
+
+/* Google Web Fonts CDN */
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap')
+	;
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #eee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+/* item */
+.item {
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+
+.item img {
+	transition: 1s;
+}
+
+.detail {
+	background-color: #f8f8f8;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	height: 250px;
+	transition: 0.5s;
+	padding: 0 20px;
+	box-sizing: border-box;
+	bottom: -180px;;
+}
+
+.item:hover .detail {
+	bottom: 0;
+}
+
+.item:hover img{
+	filter:blur(2px);
+}
+
+
+/* title */
+.title {
+	border-bottom: 1px solid #ddd;
+	/* 자식요소(.title h2)가 float속성이 들어가 있으므로  미적용*/
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.title h2 {
+	font-size: 16px;
+	color: #888;
+	line-height: 1.2em;
+	float: left;
+}
+
+.title h2 em {
+	font-style: normal;
+	display: block;
+	color: #000;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.title .price {
+	float: right;
+	margin-top: 15px;
+	font-size: 20px;
+	color: crimson;
+}
+
+/* info */
+.info {
+	position: relative;
+}
+
+/* size */
+.size {
+	margin-bottom: 10px;
+}
+
+.size label, .color label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.size span {
+	font-size: 12px;
+	/* background-color: #000;
+	color: #fff; */
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	text-align: center;
+	line-height: 15px;
+	padding: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.size span.active, .size span:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+.color span, .size span {
+	transition: 0.4s;
+}
+
+/* color */
+.color span {
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.color span.active, .size span:hover {
+	border-radius: 50%;
+}
+
+.color span:nth-of-type(1) {
+	background-color: #808000;
+}
+
+.color span:nth-of-type(2) {
+	background-color: #ff0000;
+}
+
+.color span:nth-of-type(3) {
+	background-color: #ffc0cb;
+}
+
+.color span:nth-of-type(4) {
+	background-color: #00ffff;
+}
+
+.color span:nth-of-type(5) {
+	background-color: #0000ff;
+}
+
+.add-cart {
+	border: 1px solid #ddd;
+	width: 100%;
+	padding: 7px;
+	background-color: #fff;
+	cursor: pointer;
+	margin-top: 10px;
+	outline: none;
+}
+
+.add-cart:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/* like */
+.like {
+	cursor: pointer;
+}
+
+.like:before {
+	content: '\f08a';
+	font-family: fontawesome;
+	color: #bbb;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.like.active:before {
+	content: '\f004';
+	color: crimson;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function() {
+			
+			
+			
+			$('.navi li').eq($(this).index()).addClass("image");
+			$('.navi li').removeClass("image");
+			
+				
+			$('.navi li').on("mouseenter focusin", function() {
+				var index = $('.navi li').index(this) + 1; 
+				var changeImage = 'images/portrait-0' +index+'.jpg';
+				
+				$(".photo").css({
+					'background-image': 'url(' + changeImage + ')'
+				});
+			});
+			
+			$('.navi li').on("mouseleave focusout", function() {
+				$(".photo").css({
+					'background-image': ''
+				});
+			}); 
+			
+			/* $('.navi li').mouseenter(function() {
+				var changeImage = $(this).attr("data-image");
+				/* alert(changeImage);
+				$(".photo").css({
+					'background-image': 'url(' + changeImage + ')'
+				});
+			});
+			
+			$('.navi li').focusin(function() {
+				var changeImage = $(this).attr("data-image");
+				$(".photo").css({
+					'background-image': 'url(' + changeImage + ')'
+				});
+			}); 
+				
+			$('.navi li').mouseleave(function() {
+				$(".photo").css({
+					'background-image': ''
+				});
+			});
+			
+			$('.navi li').focusout(function() {
+				$(".photo").css({
+					'background-image': ''
+				});
+			});
+			 */	
+
+		});
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="navi">
+			<li><a href="#none" data-text= "ABOUT">ABOUT</a></li>
+			<li><a href="#none" data-text= "INSTRUCTOR">INSTRUCTOR</a></li>
+			<li><a href="#none" data-text= "CLASS">CLASS</a></li>
+			<li><!--data-image="images/portrait-04.jpg"--><a href="#none" data-text= "LOCATION">LOCATION</a></li>
+		</ul>
+		<div class="photo"></div>
+	</div>
+</body>
+</html>
